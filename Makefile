@@ -1,7 +1,8 @@
 ALL_PROBLEMS=1 2 3
 PROBLEM=3
+FILENAME=solutions/euler_$(PROBLEM).py
 
-.PHONY: all problem clean
+.PHONY: all new problem clean
 
 all:
 	@for p in $(ALL_PROBLEMS) ; do \
@@ -12,5 +13,13 @@ all:
 
 problem:
 	@echo "Solution to problem $(PROBLEM)..."
-	@python solutions/euler_$(PROBLEM).py
+	@python $(FILENAME).py
 
+new:
+	@if [ -f solutions/euler_$(PROBLEM).py ]; then \
+	  echo "Problem already exists!" ; \
+	else \
+	  echo "Creating problem $(PROBLEM)..." ; \
+	  touch $(FILENAME) ; \
+	  chmod +x $(FILENAME) ; \
+	fi
