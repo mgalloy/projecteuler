@@ -1,5 +1,5 @@
-ALL_PROBLEMS=1 2 3
-PROBLEM=3
+ALL_PROBLEMS=1 2 3 4
+PROBLEM=4
 FILENAME=solutions/euler_$(PROBLEM).py
 
 .PHONY: all new problem clean
@@ -13,7 +13,7 @@ all:
 
 problem:
 	@echo "Solution to problem $(PROBLEM)..."
-	@python $(FILENAME).py
+	@python $(FILENAME)
 
 new:
 	@if [ -f solutions/euler_$(PROBLEM).py ]; then \
