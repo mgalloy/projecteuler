@@ -11,6 +11,6 @@ if __name__ == "__main__":
     if x > math.sqrt(value): break
     if value % x == 0: largest_factor = x
 
-  print "The largest prime factor of %d is %d" % (value, largest_factor)
+  print "The largest prime factor of %d is %d." % (value, largest_factor)
 
     

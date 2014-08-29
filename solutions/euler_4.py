@@ -33,7 +33,7 @@ def main():
       if is_palindrome(n) and n > largest_palindrome:
         largest_palindrome = n
 
-  print "The largest palindrome made from the product of two 3-digit numbers is %d" % largest_palindrome
+  print "The largest palindrome made from the product of two 3-digit numbers is %d." % largest_palindrome
 
 
 if __name__ == "__main__":

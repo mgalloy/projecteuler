@@ -9,7 +9,7 @@ def main():
   n = 10001
   for x in numbertheory.primes.postponed_sieve():
     if i == n:
-      print "The %d prime is %d" % (n, x)
+      print "The %d prime is %d." % (n, x)
       break
     i += 1
 

@@ -12,4 +12,4 @@ if __name__ == "__main__":
     else:
       if x % 2 == 0: fib_sum += x
 
-  print "The sum of the Fibonacci numbers less than %d is %d" % (limit, fib_sum)
+  print "The sum of the Fibonacci numbers less than %d is %d." % (limit, fib_sum)

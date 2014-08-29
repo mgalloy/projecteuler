@@ -19,7 +19,7 @@ def main():
     if x > limit: break
     value *= x ** int(math.log(limit) / math.log(x))
 
-  print "The smallest number that is evenly divisble by all numbers 1 to %d is %d" % (limit, value)
+  print "The smallest number that is evenly divisble by all numbers 1 to %d is %d." % (limit, value)
 
 if __name__ == "__main__":
   sys.exit(main())

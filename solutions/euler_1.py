@@ -8,5 +8,5 @@ if __name__ == "__main__":
     if (x % 3 == 0 or x % 5 == 0):
       sum += x
 
-  print "The sum of the multiples of 3 and 5 below %d is %d" % (limit, sum)
+  print "The sum of the multiples of 3 and 5 below %d is %d." % (limit, sum)
     
