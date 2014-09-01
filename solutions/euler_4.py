@@ -7,30 +7,16 @@
 
 import sys
 import math
-
-
-def digits(n):
-  n_digits = int(math.ceil(math.log10(n)))
-  digits = []
-  for x in range(n_digits):
-    d = (n % 10 ** (x + 1)) / 10 ** x
-    digits.insert(0, d)
-  return digits
-
-def is_palindrome(n):
-  d = digits(n)
-  for x in range(len(d) / 2):
-    if d[x] != d[- x - 1]: return False
-  return True
+import numbertheory.digits
 
 
 def main():
   largest_palindrome = 1
 
-  for x in range(100, 999):
-    for y in range(100, 999):
+  for x in xrange(100, 999):
+    for y in xrange(100, 999):
       n = x * y
-      if is_palindrome(n) and n > largest_palindrome:
+      if numbertheory.digits.is_palindrome(n) and n > largest_palindrome:
         largest_palindrome = n
 
   print "The largest palindrome made from the product of two 3-digit numbers is %d." % largest_palindrome

@@ -1,5 +1,5 @@
-ALL_PROBLEMS=1 2 3 4 5 6 7 8 9
-PROBLEM=9
+ALL_PROBLEMS=1 2 3 4 5 6 7 8 9 20 40 42 48
+PROBLEM=145
 FILENAME=solutions/euler_$(PROBLEM).py
 
 .PHONY: all new problem clean

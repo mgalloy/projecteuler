@@ -5,8 +5,8 @@ import sys
 
 def main():
   n = 1000
-  for a in range(n):
-    for b in range(a + 1, n):
+  for a in xrange(n):
+    for b in xrange(a + 1, n):
       if n**2 - 2 * n * (a + b) + 2 * a * b == 0:
         c = 1000 - a - b
         if c > b and c < n:

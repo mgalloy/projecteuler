@@ -35,13 +35,13 @@ def main():
   max_product = 0
   start_index = 0
 
-  for x in range(ndigits - n + 1):
+  for x in xrange(ndigits - n + 1):
     p = reduce(operator.mul, sequence[x:x+n])
     if p > max_product:
       max_product = p
       start_index = x
 
-  print "The maximum product of %d consequence values is %d (%s)." % (n, max_product, ''.join(map(lambda x: '%d' % x, sequence[start_index:start_index + n])))
+  print "The maximum product of %d consequence values is %d (%s)." % (n, max_product, ''.join(map(lambda x: str(x), sequence[start_index:start_index + n])))
 
 
 if __name__ == "__main__":
