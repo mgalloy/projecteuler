@@ -3,15 +3,17 @@
 import sys
 import numbertheory.primes
 
+def euler_7(n):
+  for i, p in enumerate(numbertheory.primes.postponed_sieve()):
+    if i == n - 1: break
+  return p
+
 
 def main():
-  i = 1
   n = 10001
-  for x in numbertheory.primes.postponed_sieve():
-    if i == n:
-      print "The %d prime is %d." % (n, x)
-      break
-    i += 1
+  n_prime = euler_7(n)
+
+  print "The %d prime is %d." % (n, n_prime)
 
 
 if __name__ == "__main__":

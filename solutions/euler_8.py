@@ -28,18 +28,22 @@ sequence = ''.join(sequence.split())
 sequence = list(sequence)
 sequence = map(lambda x: int(x), sequence)
 
-def main():
-  ndigits = len(sequence)
-  n = 13
-
+def euler_8(n_digits, n):
   max_product = 0
   start_index = 0
 
-  for x in xrange(ndigits - n + 1):
+  for x in xrange(n_digits - n + 1):
     p = reduce(operator.mul, sequence[x:x+n])
     if p > max_product:
       max_product = p
       start_index = x
+
+  return max_product, start_index
+
+def main():
+  n_digits = len(sequence)
+  n = 13
+  max_product, start_index = euler_8(n_digits, n)
 
   print "The maximum product of %d consequence values is %d (%s)." % (n, max_product, ''.join(map(lambda x: str(x), sequence[start_index:start_index + n])))
 

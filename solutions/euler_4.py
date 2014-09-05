@@ -10,7 +10,7 @@ import math
 import numbertheory.digits
 
 
-def main():
+def euler_4():
   largest_palindrome = 1
 
   for x in xrange(100, 999):
@@ -18,6 +18,11 @@ def main():
       n = x * y
       if numbertheory.digits.is_palindrome(n) and n > largest_palindrome:
         largest_palindrome = n
+
+  return largest_palindrome
+
+def main():
+  largest_palindrome = euler_3()
 
   print "The largest palindrome made from the product of two 3-digit numbers is %d." % largest_palindrome
 
